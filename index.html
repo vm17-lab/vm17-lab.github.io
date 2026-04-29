@@ -66,7 +66,6 @@ section{padding:100px 48px}
 .meta-item .label{font-family:var(--fm);font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 .meta-item .val{font-size:14px;font-weight:600;color:var(--navy)}
 
-
 /* RESUME ICON BUTTON */
 .resume-icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;background:var(--navy);color:#ffffff;border:none;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none;letter-spacing:0.3px;transition:background .2s}
 .resume-icon-btn:hover{background:var(--navy2)}
@@ -107,7 +106,6 @@ section{padding:100px 48px}
 #contact .sec-heading{color:var(--white)}
 #contact .sec-heading::after{background:var(--gold)}
 .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-blurb{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.85;font-weight:300;margin-bottom:36px}
 .contact-list{display:flex;flex-direction:column;gap:20px}
 .citem{display:flex;align-items:center;gap:16px;text-decoration:none}
 .citem-icon{width:46px;height:46px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
@@ -163,7 +161,6 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-brand" href="#home">Portfolio.</a>
   <ul class="nav-links">
@@ -175,14 +172,13 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="home">
   <div class="hero-bg-circle"></div>
   <div class="hero-bg-circle"></div>
   <div class="hero-inner">
     <div class="hero-greeting">Hello, my name is</div>
     <div class="hero-name">Vincy<br><span>Mehta</span></div>
-    <div class="typed-line">And I'm a <span class="typed-text" id="typed"></span><span class="cursor"></span></div>
+    <div class="typed-line">And I'm a <span class="typed-text" id="typed-hero"></span><span class="cursor"></span></div>
     <div class="hero-location">&#128205; Morbi, Gujarat, India</div>
     <a class="hero-cta" href="https://www.linkedin.com/in/vincy-mehta-489982398" target="_blank">Let's Connect</a>
   </div>
@@ -192,7 +188,6 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="reveal">
@@ -202,11 +197,11 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
     <div class="about-layout">
       <div class="photo-frame reveal-left">
         <div class="photo-box">
-          <img src="Profile.jpeg" alt="Vincy Mehta"> 
+          <img src="WhatsApp Image 2026-04-19 at 9.41.23 PM.jpeg" alt="Vincy Mehta"> 
         </div>
       </div>
       <div class="reveal-right">
-        <p>I'm <strong>Vincy Mehta</strong> and I'm a Data Scientist.</p>
+        <p>I'm <strong>Vincy Mehta</strong> and I'm a <span id="typed-about"></span><span class="cursor"></span></p><br/>
   
         <p>I am a BCA graduate from Saurashtra University and have completed a Post-Graduate Program in Data Science and Artificial Intelligence from Digicrome Academy. I am seeking data science and AI internship opportunities to apply strong skills in Machine Learning, Python, SQL, Pandas, Matplotlib, Power BI, Data Visualization, and Data Cleaning.</p>
        
@@ -217,20 +212,17 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
           <div class="meta-item"><div class="label">Location</div><div class="val">Morbi, Gujarat, India</div></div>
         </div>
     
-              <a class="resume-icon-btn" href="Vincy Mehta .pdf" download="Vincy Mehta .pdf">
+          <a class="resume-icon-btn" href="Vincy Mehta .pdf" download="Vincy Mehta .pdf">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-5h8v1.5H8V15zm0-3h8v1.5H8V12zm0-3h4v1.5H8V9z"/>
             </svg>
             Download Resume
           </a>
-        
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="reveal">
@@ -297,7 +289,6 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="reveal">
@@ -327,7 +318,6 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="reveal">
@@ -350,7 +340,7 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
             <div><div class="citem-lbl">GitHub</div><div class="citem-val">@vm17-lab</div></div>
           </a>
           <a class="citem" href="https://www.linkedin.com/in/vincy-mehta-489982398" target="_blank">
-            <div class="citem-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+            <div class="citem-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
             <div><div class="citem-lbl">LinkedIn</div><div class="citem-val">Vincy Mehta</div></div>
           </a>
           <a class="citem" href="#home">
@@ -362,7 +352,6 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
         </div>
       </div>
 
-      <!-- CONTACT FORM — replace YOUR_FORM_ID with your Formspree ID from formspree.io -->
       <div class="reveal-right">
         <form class="contact-form" id="contactForm" onsubmit="sendMsg(event)">
           <div>
@@ -389,26 +378,36 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-brand">Vincy Mehta</div>
   <p>&#169; 2025 Vincy Mehta &middot; Morbi, Gujarat, India &middot; All rights reserved</p>
 </footer>
 
 <script>
-/* TYPING */
+/* TYPING ANIMATION */
 const words = ['Data Scientist','Python Developer','Power BI Analyst','Data Analyst'];
 let wi = 0, ci = 0, del = false;
-const el = document.getElementById('typed');
+
+// Targeted elements for BOTH sections
+const elHero = document.getElementById('typed-hero');
+const elAbout = document.getElementById('typed-about');
+
 function tick() {
   const w = words[wi];
-  if (!del) {
-    el.textContent = w.slice(0, ++ci);
-    if (ci === w.length) { setTimeout(() => { del = true; tick(); }, 1900); return; }
-  } else {
-    el.textContent = w.slice(0, --ci);
-    if (ci === 0) { del = false; wi = (wi + 1) % words.length; }
+  const currentText = del ? w.slice(0, --ci) : w.slice(0, ++ci);
+  
+  // Update both sections if they exist
+  if (elHero) elHero.textContent = currentText;
+  if (elAbout) elAbout.textContent = currentText;
+
+  if (!del && ci === w.length) {
+    setTimeout(() => { del = true; tick(); }, 1900);
+    return;
+  } else if (del && ci === 0) {
+    del = false;
+    wi = (wi + 1) % words.length;
   }
+  
   setTimeout(tick, del ? 55 : 105);
 }
 tick();
@@ -444,7 +443,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* CONTACT FORM — real Formspree submission */
+/* CONTACT FORM */
 function sendMsg(e) {
   e.preventDefault();
   const btn = document.getElementById('sendBtn');
