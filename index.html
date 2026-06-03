@@ -86,16 +86,29 @@ section{padding:100px 48px}
 .proj-link-row{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gold);font-weight:600;margin-top:6px;border-top:1px solid var(--cream3);padding-top:12px}
 .proj-link-row svg{width:14px;height:14px;fill:var(--gold)}
 
-/* SKILLS */
-#skills{background:var(--cream)}
+/* SKILLS — card style (no bars) */
 .skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.skill-col-label{font-family:var(--fh);font-size:24px;font-weight:700;color:var(--navy);margin-bottom:30px}
-.skill-row{margin-bottom:24px}
-.skill-top{display:flex;justify-content:space-between;margin-bottom:9px}
-.skill-name{font-size:14px;font-weight:600;color:var(--text)}
-.skill-pct{font-family:var(--fm);font-size:13px;color:var(--gold);font-weight:500}
-.bar-bg{height:7px;background:var(--cream3);border-radius:100px;overflow:hidden}
-.bar-fill{height:100%;border-radius:100px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1);background:linear-gradient(90deg,var(--navy2),var(--gold))}
+.skill-col-label{font-size:13px;font-weight:600;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.skill-item{display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--navy2);border:1px solid var(--cream3);border-radius:10px;margin-bottom:10px;transition:border-color .2s,transform .2s}
+.skill-item:hover{border-color:rgba(201, 168, 76, 0.945);transform:translateX(4px)}
+.skill-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.skill-name{font-size:14px;font-weight:600;color:var(--gold2);flex:1}
+.skill-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;letter-spacing:0.3px}
+.b-adv{background:#E1F5EE;color:#0F6E56}
+.b-int{background:#E6F1FB;color:#185FA5}
+.b-prof{background:#EEEDFE;color:#3C3489}
+.icon-py{background:#FAEEDA;color:#BA7517}
+.icon-ml{background:#EEEDFE;color:#534AB7}
+.icon-viz{background:#E1F5EE;color:#0F6E56}
+.icon-sql{background:#E6F1FB;color:#185FA5}
+.icon-bi{background:#FAECE7;color:#993C1D}
+.icon-xl{background:#EAF3DE;color:#3B6D11}
+.icon-at{background:#E1F5EE;color:#0F6E56}
+.icon-ps{background:#EEEDFE;color:#534AB7}
+.icon-co{background:#E6F1FB;color:#185FA5}
+.icon-tw{background:#FAEEDA;color:#BA7517}
+.icon-ad{background:#FAECE7;color:#993C1D}
+.icon-eda{background:#EAF3DE;color:#3B6D11}
 
 /* ===================== CERTIFICATES ===================== */
 #certificates{background:var(--white)}
@@ -321,25 +334,62 @@ footer p{font-size:12px;color:rgba(255,255,255,0.28)}
     <div class="skills-cols reveal">
       <div>
         <div class="skill-col-label">Technical Skills</div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Python Programming</span><span class="skill-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Machine Learning</span><span class="skill-pct">75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Data Visualisation</span><span class="skill-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">SQL</span><span class="skill-pct">75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Power BI / Tableau</span><span class="skill-pct">80%</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Excel &amp; Data Cleaning</span><span class="skill-pct">90%</span></div><div class="bar-bg"><div class="bar-fill" data-w="90"></div></div></div>
+        <div class="skill-item">
+          <div class="skill-icon icon-py">🐍</div>
+          <span class="skill-name">Python Programming</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-ml">🧠</div>
+          <span class="skill-name">Machine Learning</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-viz">📊</div>
+          <span class="skill-name">Data Visualisation</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-sql">🗄️</div>
+          <span class="skill-name">SQL</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-bi">📈</div>
+          <span class="skill-name">Power BI / Tableau</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-xl">📋</div>
+          <span class="skill-name">Excel &amp; Data Cleaning</span>
+        </div>
       </div>
       <div>
         <div class="skill-col-label">Professional Skills</div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Analytical Thinking</span><span class="skill-pct">90%</span></div><div class="bar-bg"><div class="bar-fill" data-w="90"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Problem Solving</span><span class="skill-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Communication</span><span class="skill-pct">80%</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Teamwork</span><span class="skill-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Adaptability</span><span class="skill-pct">88%</span></div><div class="bar-bg"><div class="bar-fill" data-w="88"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Exploratory Data Analysis</span><span class="skill-pct">82%</span></div><div class="bar-bg"><div class="bar-fill" data-w="82"></div></div></div>
+        <div class="skill-item">
+          <div class="skill-icon icon-at">🔍</div>
+          <span class="skill-name">Analytical Thinking</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-ps">💡</div>
+          <span class="skill-name">Problem Solving</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-co">💬</div>
+          <span class="skill-name">Communication</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-tw">👥</div>
+          <span class="skill-name">Teamwork</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-ad">🔄</div>
+          <span class="skill-name">Adaptability</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon icon-eda">🔎</div>
+          <span class="skill-name">Exploratory Data Analysis</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- CERTIFICATES -->
 <section id="certificates">
